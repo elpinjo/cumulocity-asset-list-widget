@@ -1,7 +1,7 @@
 {
-  "name": "Runtime Loaded Widget",
-  "contextPath": "cumulocity-runtime-widget",
-  "key": "cumulocity-runtime-widget-application-key",
+  "name": "Events List Widget",
+  "contextPath": "events-list-widget",
+  "key": "events-list-widget-application-key",
   "contentSecurityPolicy": "default-src 'self'",
   "icon": {
     "class": "fa fa-puzzle-piece"
