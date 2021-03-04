@@ -1,7 +1,7 @@
 {
-  "name": "Events List Widget",
-  "contextPath": "events-list-widget",
-  "key": "events-list-widget-application-key",
+  "name": "Asset List Widget",
+  "contextPath": "asset-list-widget",
+  "key": "asset-list-widget-application-key",
   "contentSecurityPolicy": "default-src 'self'",
   "icon": {
     "class": "fa fa-puzzle-piece"

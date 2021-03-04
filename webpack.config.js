@@ -2,7 +2,7 @@ const URLImportPlugin  = require("webpack-external-import/webpack");
 const path = require('path');
 
 module.exports = {
-    mode: 'production',
+    mode: 'development',
     devtool: 'source-map',
     entry: {
         [require('./cumulocity.json').contextPath]: './dist/bundle-src/custom-widget.js'
@@ -43,7 +43,7 @@ module.exports = {
             basePath: '',
             publicPath: `/apps/${require('./cumulocity').contextPath}/`,
             useExternals: {
-                "@angular/animations": "AngularAnimations",
+                //"@angular/animations": "AngularAnimations",
                 "@angular/common": "AngularCommon",
                 "@angular/common/http": "AngularCommonHttp",
                 "@angular/core": "AngularCore",

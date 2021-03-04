@@ -1,24 +1,24 @@
 {
-  "name": "cumulocity-events-list-widget",
+  "name": "asset-list-widget",
   "interleave": {
-    "dist\\bundle-src\\custom-widget.js": "cumulocity-events-list-CustomWidget",
-    "dist/bundle-src/custom-widget.js": "cumulocity-events-list-CustomWidget"
+    "dist\\bundle-src\\custom-widget.js": "asset-list-widget-CustomWidget",
+    "dist/bundle-src/custom-widget.js": "asset-list-widget-CustomWidget"
   },
   "version": "0.0.0-development",
-  "description": "Custom events list widget which support events from multiple devices",
+  "description": "Custom asset list widget which support searching the asset list",
   "scripts": {
     "build": "gulp"
   },
   "keywords": [],
   "author": "Misja Heuveling - Software AG Netherlands",
   "license": "Apache 2.0",
-  "dependencies": {},
-  "peerDependencies": {
+  "dependencies": {
     "@angular/common": "8.2.13",
     "@angular/core": "8.2.13",
     "@angular/forms": "8.2.13",
     "@angular/http": "7.2.15",
     "@angular/router": "8.2.13",
+    "@angular/material": "^8.2.3",
     "@c8y/ngx-components": "1006.6.24"
   },
   "devDependencies": {
