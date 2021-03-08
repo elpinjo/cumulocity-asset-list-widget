@@ -1,11 +1,11 @@
 <mat-form-field class="md-form input-group mb-3">
     <div class="input-group-prepend">
-      <mat-label class="input-group-text md-addon" id="material-addon1">Search: </mat-label>
+      <mat-label class="input-group-text md-addon" id="material-addon1">Filter: </mat-label>
     </div>
-    <input matInput (keyup)="applyFilter($event)" placeholder="Ex. search" #input placeholder="Search" aria-label="Search" aria-describedby="material-addon1">
+    <input matInput (keyup)="applyFilter($event)" placeholder="Ex. search" #input placeholder="Filter" aria-label="Fitler" aria-describedby="material-addon1">
 </mat-form-field>
 
-<table mat-table matSort [dataSource]="dataSource" class="mat-elevation-z8 table table-condensed table-striped">
+<table mat-table [dataSource]="dataSource" matSort #sort="matSort" (matSortChange)="sortData(sort)" class="mat-elevation-z8 table table-condensed table-striped">
 
   <!-- Position Column -->
   <ng-container matColumnDef="id">
@@ -15,32 +15,32 @@
 
   <!-- Name Column -->
   <ng-container matColumnDef="name">
-    <th mat-header-cell *matHeaderCellDef mat-sort-header> Name </th>
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> Naam </th>
     <td mat-cell *matCellDef="let element"> {{element.name}} </td>
   </ng-container>
 
   <!-- Weight Column -->
   <ng-container matColumnDef="orderNr">
     <th mat-header-cell *matHeaderCellDef mat-sort-header> Order nummer </th>
-    <td mat-cell *matCellDef="let element"> {{element.cmdb_properties ? element.cmdb_properties.OrderNr : ''}} </td>
+    <td mat-cell *matCellDef="let element"> {{element.orderNr}} </td>
   </ng-container>
 
   <!-- Symbol Column -->
   <ng-container matColumnDef="caseId">
     <th mat-header-cell *matHeaderCellDef mat-sort-header> Case Id. </th>
-    <td mat-cell *matCellDef="let element"> {{element.cmdb_properties ? element.cmdb_properties.CaseId : ''}} </td>
+    <td mat-cell *matCellDef="let element"> {{element.caseId}} </td>
   </ng-container>
 
   <!-- Symbol Column -->
   <ng-container matColumnDef="chargeNr">
     <th mat-header-cell *matHeaderCellDef mat-sort-header> Charge nummer </th>
-    <td mat-cell *matCellDef="let element"> {{element.cmdb_properties ? element.cmdb_properties.ChargeNr : ''}} </td>
+    <td mat-cell *matCellDef="let element"> {{element.chargeNr}} </td>
   </ng-container>
 
   <!-- Symbol Column -->
   <ng-container matColumnDef="articleNr">
     <th mat-header-cell *matHeaderCellDef mat-sort-header> Artikel nummer </th>
-    <td mat-cell *matCellDef="let element"> {{element.cmdb_properties ? element.cmdb_properties.ArticleNr : ''}} </td>
+    <td mat-cell *matCellDef="let element"> {{element.articleNr}} </td>
   </ng-container>
 
   <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
